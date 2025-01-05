@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    background: linear-gradient(45deg, #000000, #b74b4b);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+.logo {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #b74b4b;
+    transition: transform 0.5s ease;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+nav a:hover,
+nav a.active {
+    color: #b74b4b;
+    transform: scale(1.2);
+}
+
+/* Section styles */
+section {
+    position: relative;
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
+    text-align: center;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    background: linear-gradient(45deg, #b74b4b, #000);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.home-img img {
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #b74b4b;
+}
+.home-content h1 {
+    font-size: 4rem;
+}
+.home-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.home-content span {
+    color: #b74b4b;
+}
+.social-icons a {
+    margin: 0 1rem;
+    color: #b74b4b;
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* Activities Section */
+.activities h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #b74b4b;
+}
+.activity-container {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.activity-box {
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.activity-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.activity-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #b74b4b;
+}
+
+/* Contact Section */
+.contact h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #b74b4b;
+}
+.contact p{
+    font-size: 2rem;
+}
+/* Separator */
+hr {
+    border: none;
+    height: 6px;
+    background: radial-gradient(circle, #b74b4b, transparent);
+    border-radius: 3px;
+    margin: 5rem auto;
+    width: 80%;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    padding: 3rem 9%;
+    text-align: center;
+    margin-top: 2rem;
+}
+footer h2 {
+    font-size: 2.5rem;
+    color: #b74b4b;
+    margin-bottom: 2rem;
+}
+footer ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+footer ul li {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+footer ul li a {
+    color: #b74b4b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer ul li a:hover {
+    color: white;
+}
+footer p {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    border: 3px solid #b74b4b;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #b74b4b;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-img img {
+        width: 200px;
+    }
+    nav a {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+}
