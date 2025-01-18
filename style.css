@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-/* Global styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,24 +17,23 @@ body {
     overflow-x: hidden;
 }
 
-/* Header */
+
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 5%;
     background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     z-index: 1000;
 }
 .logo {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #b74b4b;
-    transition: transform 0.5s ease;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
 }
 .logo:hover {
     transform: scale(1.1);
@@ -51,7 +50,7 @@ nav a.active {
     transform: scale(1.2);
 }
 
-/* Section styles */
+
 section {
     position: relative;
     min-height: 100vh;
@@ -59,7 +58,6 @@ section {
     text-align: center;
 }
 
-/* Home Section */
 .home {
     display: flex;
     align-items: center;
@@ -100,7 +98,7 @@ section {
     transform: scale(1.2);
 }
 
-/* Activities Section */
+
 .activities h2 {
     font-size: 3rem;
     margin-bottom: 3rem;
@@ -129,7 +127,7 @@ section {
     box-shadow: 0 0 20px #b74b4b;
 }
 
-/* Contact Section */
+
 .contact h2 {
     font-size: 3rem;
     margin-bottom: 3rem;
@@ -138,7 +136,6 @@ section {
 .contact p{
     font-size: 2rem;
 }
-/* Separator */
 hr {
     border: none;
     height: 6px;
@@ -148,7 +145,7 @@ hr {
     width: 80%;
 }
 
-/* Footer */
+
 footer {
     background: #111;
     color: white;
@@ -184,7 +181,6 @@ footer p {
     color: #ccc;
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -222,5 +218,52 @@ footer p {
     nav a {
         font-size: 1.5rem;
         margin-left: 1rem;
+    }
+}
+
+.hamburger-menu {
+    display: flex; 
+    flex-direction: column;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+
+#nav-menu {
+    display: flex;
+    gap: 2rem;
+    transition: all 0.3s ease;
+}
+
+#nav-menu.hidden {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    #nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    #nav-menu.hidden {
+        display: none;
     }
 }
