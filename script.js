@@ -1,4 +1,4 @@
-// Smooth scroll functionality
+
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -14,27 +14,32 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-// Image Modal
 const modal = document.getElementById("image-modal");
 const modalImg = document.getElementById("modal-img");
 const closeBtn = document.querySelector(".close");
 
-// Open the modal when clicking on an activity image
 document.querySelectorAll(".activity-img").forEach(img => {
     img.addEventListener("click", function () {
         modal.style.display = "block";
-        modalImg.src = this.src; // Use the source of the clicked image
+        modalImg.src = this.src; 
     });
 });
 
-// Close the modal when clicking on the close button
 closeBtn.addEventListener("click", function () {
     modal.style.display = "none";
 });
 
-// Close the modal when clicking anywhere outside the modal content
+
 modal.addEventListener("click", function (e) {
     if (e.target === modal) {
         modal.style.display = "none";
     }
+});
+
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const navMenu = document.getElementById("nav-menu");
+
+
+hamburgerMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("hidden");
 });
